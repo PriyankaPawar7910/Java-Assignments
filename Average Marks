@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Source {
+    public static void main(String[] args) {
+	// Start Code
+	Scanner sc = new Scanner(System.in);
+	
+	    int[] marks = new int[3];
+	    int i;
+	    boolean flag=true;
+	    
+	    for(i=0;i<3;i++){
+	        marks[i] = sc.nextInt();
+	        if(marks[i]<0 || marks[i]>100){
+	            flag=false;
+	        }
+	        
+	    }
+	    if(flag){
+	        int avg = (marks[0]+marks[1]+marks[2])/3;
+	        if(avg>=70){
+	            System.out.println("DISTINCTION");
+	            
+	        }
+	        else if(avg>=60){
+	            System.out.println("FIRST");
+	            
+	        }
+	        else if(avg>=50){
+	            System.out.println("SECOND");
+	            
+	        }
+	        else if(avg>=40){
+	            System.out.println("THIRD");
+	            
+	        }
+	        else if(avg<40){
+	            System.out.println("FAIL");
+	            
+	        }
+	        
+	    }
+	    else{
+	         System.out.println("INVALIDMARKS");
+	    }
+	
+	sc.close();
+	// End Code
+
+    }
+}
