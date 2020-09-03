@@ -1,0 +1,55 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+    public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+        
+        // Declare the variable
+        int size;
+        int i,j,temp;
+        
+        // Read the variable from STDIN
+        if(in.hasNextInt()){
+            
+            size = in.nextInt();
+            if(size>1 && size<20){
+                int[] array = new int[size];
+                
+                for(i=0;i<size;i++){
+                    array[i] = in.nextInt();
+                    
+                }
+                for(i=1;i<size;i++){
+                    for(j=0;j<size-i;j++){
+                        if(array[j]>array[j+1]){
+                            temp = array[j];
+                            array[j] = array[j+1];
+                            array[j+1] = temp;
+                            
+                        }
+                        
+                    }
+                    
+                }
+                System.out.println("MIN="+array[0]);
+                System.out.println("MAX="+array[size-1]);
+                
+            }
+            else{
+                System.out.println("INVALID_INPUT");
+                
+            }
+            
+        }
+        in.close();
+        
+    }
+}
