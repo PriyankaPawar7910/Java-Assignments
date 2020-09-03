@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+    public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+        if(in.hasNextInt()){
+            //declare variable
+            int s1 = in.nextInt();
+            int s2 = in.nextInt();
+            int s3 = in.nextInt();
+            if(s1<s2 || s1<s3){
+                System.out.println("INVALID_INPUT");
+            }
+            else{
+                s1*=s1;
+                s2*=s2;
+                s3*=s3;
+                if(s1==(s2+s3)){
+                    System.out.println("RIGHT ANGLE");
+                }
+                else{
+                    System.out.println("NOT RIGHT ANGLE");
+                }
+            }
+        }
+        
+        
+        
+        
+   }
+}
